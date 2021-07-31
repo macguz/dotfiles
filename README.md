@@ -6,6 +6,7 @@
 
 ```shell
 # 推荐先安装配置oh my zsh
+curl https://raw.githubusercontent.com/macguz/dotfiles/master/bootstrap.sh >> bootstrap.sh
 ./bootstrap.sh
 source ~/.zshrc
 # 取消vimrc最后一行注释的
