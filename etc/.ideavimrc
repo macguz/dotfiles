@@ -1,0 +1,28 @@
+" ~~~~~~~~~~~~~~~~~~~~~~输入/快捷键配置~~~~~~~~~~~~~~~~~~~~~~~
+
+" jj切换正常模式
+inoremap jj <esc>
+
+" Enter 快速插入空格
+nmap <cr> o<esc>
+
+" gh 光标移至行首，gl光标移至行尾
+map gh ^
+map gl $
+
+# 快速跳转插件，需要在ide中下载插件AceJump, IdeaVim-EasyMotion
+set easymotion
+nmap ss <Plug>(easymotion-s2)
+
+nnoremap ga :<C-u>action GotoAction<CR>
+nnoremap gb :<C-u>action JumpToLastChange<CR>
+nnoremap gc :<C-u>action GotoClass<CR>
+nnoremap gd :<C-u>action GotoDeclaration<CR>
+nnoremap gs :<C-u>action GotoSuperMethod<CR>
+nnoremap gi :<C-u>action GotoImplementation<CR>
+nnoremap gf :<C-u>action GotoFile<CR>
+nnoremap gm :<C-u>action GotoSymbol<CR>
+nnoremap gu :<C-u>action ShowUsages<CR>
+nnoremap gt :<C-u>action GotoTest<CR>
+nnoremap gp :<C-u>action FindInPath<CR>
+nnoremap gr :<C-u>action RecentFiles<CR>

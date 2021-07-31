@@ -1,0 +1,7 @@
+etc/oh-my-tmux/
+etc/z/
+etc/local.sh
+
+dotfiles/
+*/.idea/
+
