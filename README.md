@@ -1,6 +1,7 @@
 # 推荐阅读：[提高效率从编写 init.sh 开始](https://zhuanlan.zhihu.com/p/50080614)
 
-​	阅读韦神文章得到的灵感，也借鉴了[hanxi/dotfiles: bash + tmux + neovim (github.com)](https://github.com/hanxi/dotfiles)
++ Your dotfiles are how you personalize your system. These are mine.
++ 阅读韦神文章得到的灵感，也借鉴了[hanxi/dotfiles: bash + tmux + neovim (github.com)](https://github.com/hanxi/dotfiles)
 
 # 使用说明：	
 
@@ -90,7 +91,7 @@ source ~/.local/bin/tmux/init.sh
 
 
 
-## [z]([rupa/z: z - jump around (github.com)](https://github.com/rupa/z)):
+## [z](https://github.com/rupa/z):
 
 根据历史跳转记录，提供快速跳转
 
@@ -188,12 +189,9 @@ source ~/.local/bin/clash/init.sh
 ---
 
 
-
-# 其他推荐：
-
 ## .ideavimrc:
 
-​	JetBrains yyds！推荐给(暂时)无法全部切换成VIM的用户。JetBrains家的IDE对vim的支持还是比较好的，有特地为vim中一些好用的插件专门做适配的插件（比如easymotion）
+​	JetBrains的IDE对vim的支持还是比较好的，有特地为vim中一些好用的插件专门做适配的插件（比如easymotion）
 
 ```shell
 ln -s -f ~/.local/etc/.ideavimrc ~/.ideamvimrc
