@@ -20,8 +20,9 @@ else
 	git clone git@github.com:macguz/dotfiles.git
     cd dotfiles
 fi
-cp -rf etc/* $ETC/
-cp -rf bin/* $BIN/
+# /. 将目录下所有文件拷贝，包括隐藏文件
+cp -rf etc/. $ETC/
+cp -rf bin/. $BIN/
 cp bootstrap.sh $BIN/
 
 # vim
