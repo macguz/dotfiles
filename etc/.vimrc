@@ -12,7 +12,7 @@ let g:gruvbox_transparent_bg = 1
 set bg=dark
 
 " 补全
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 " 括号补全
