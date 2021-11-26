@@ -1,8 +1,11 @@
 #! /bin/zsh
 
+# 执行出错时结束程序
 set -e
+# 执行shell脚本时，输出执行内容
 set -x
 
+# 创建文件夹, etc存放资源文件，bin存放脚本
 ETC=~/.local/etc
 BIN=~/.local/bin
 mkdir -p $ETC
