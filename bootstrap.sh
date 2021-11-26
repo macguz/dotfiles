@@ -75,13 +75,23 @@ else
     git clone git@github.com:rupa/z.git $ETC/z
 fi
 
-# source init.sh
-if [ -e ~/.zshrc ]; then
-	echo '~/.zshrc already exists'
-else
-	touch ~/.zshrc
+if [ -z "$ZSH" ]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	mv ~/.zshrc ~/.zshrc.bak
+	cp $ETC/.zshrc ~/.zshrc
+	source ~/.zshrc
 fi
 
+# source init.sh
+# if [ -e ~/.zshrc ]; then
+#	echo '~/.zshrc already exists'
+# else
+#	touch ~/.zshrc
+# fi
+
 # mac下sed -i要求必须备份，加''即可
-sed -i '' "\:$ETC/init.sh:d" ~/.zshrc
-echo ". $ETC/init.sh" >> ~/.zshrc
+# sed -i '' "\:$ETC/init.sh:d" ~/.zshrc
+# sed -i "\:$ETC/init.sh:d" ~/.zshrc # for linux
+# echo ". $ETC/init.sh" >> ~/.zshrc
