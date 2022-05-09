@@ -205,3 +205,7 @@ ln -s -f ~/.local/etc/.ideavimrc ~/.ideamvimrc
 
 ---
 
+## Windows terminal:
++ https://docs.microsoft.com/zh-cn/windows/terminal/customize-settings/profile-general
++ https://dev.to/thefern/windows-terminal-icons-package-3hid
+
