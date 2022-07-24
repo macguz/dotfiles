@@ -200,12 +200,13 @@ ln -s -f ~/.local/etc/.ideavimrc ~/.ideamvimrc
 
 
 ## iterm2（或其他终端）：
-
 + 修改主题配色方案：[mbadolato/iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
-
++ 字体推荐：https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/LiberationMono.zip
++ 终端图标推荐：https://www.flaticon.com/free-icon/nerd_626580
 ---
 
 ## Windows terminal:
 + https://docs.microsoft.com/zh-cn/windows/terminal/customize-settings/profile-general
++ https://docs.microsoft.com/zh-cn/windows/terminal/customize-settings/profile-appearance
 + https://dev.to/thefern/windows-terminal-icons-package-3hid
 
