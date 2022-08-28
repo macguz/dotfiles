@@ -2,15 +2,16 @@
 
 + Your dotfiles are how you personalize your system. These are mine.
 + 阅读韦神文章得到的灵感，也借鉴了[hanxi/dotfiles: bash + tmux + neovim (github.com)](https://github.com/hanxi/dotfiles)
++ ohmyzsh:[玩转WSL(5)之zsh常用配置和插件 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/242199299)
 
 # 使用说明：	
 
 ```shell
-# 推荐先安装配置oh my zsh
-curl https://raw.githubusercontent.com/macguz/dotfiles/master/bootstrap.sh >> bootstrap.sh
-./bootstrap.sh
-source ~/.zshrc
-# 取消vimrc最后一行注释的
+# 提前安装配置oh my zsh、vim、tmux
+cp -r .local ~/
+ln -s -f ~/.local/etc/oh-my-tmux/.tmux.conf ~/.tmux.conf
+cp ~/.local/etc/.tmux.conf.local ~/.tmux.conf.local
+ln -s -f ~/.local/etc/.vimrc ~/.vimrc
 ```
 
 
@@ -78,12 +79,13 @@ source ~/.local/bin/tmux/init.sh
 ### tmux的一些常用快捷键：
 
 + Ctrl a: prefix
-
 + prefix + |: 右侧新建pane
 + prefix + -: 上侧新建pane
 + prefix + C: 新建一个会话（弹窗输入会话名称）
-+ prefix + S: 切换到上一个会话
++ prefix +c: 在当前会话新建窗口
++ prefix + S: 切换到上一个会话(session)
 + prefix + s: 弹窗列表，切换会话
++ prefix + w: 切换窗口(pane)
 + prefix + @: 将当前会话的pane独立为一个新的session并进入
 + prefix + +: 将当前pane最大化
 
@@ -114,46 +116,6 @@ source ~/.local/config/z/z.sh
 z \<keyword>，跳转到最常使用的包含关键字\<keyword>的目录
 
 ---
-
-
-
-## [clash](https://github.com/Dreamacro/clash)：
-
-科学上网工具。
-
-archlinux库中提供了clash包，直接pacman安装即可。（其他发行版可能需要直接下载源码编译使用）
-
-### 配置：
-
-+ config.yaml：规则和代理，需要自己设置
-
-    ```shell
-    ln -s -f ~/.local/etc/clash/config.yaml ~/.config/clash/config.yaml # config具体位置看具体系统，给出的是archlinux的位置
-    ```
-
-+ Country.mmdb：为全球IP库，可以实现各个国家的IP信息解析和地理定位，clash依赖该文件运行，一般情况下会自动下载，所以不需要手动配置。
-
-在.zshrc或init.sh中添加：
-
-```shell
-# 配置代理
-export http_proxy="http://127.0.0.1:7890"
-export https_proxy="http://127.0.0.1:7890"
-
-# 自动启动clash，log路径=~/.clash_log
-source ~/.local/bin/clash/init.sh
-
-```
-
-​	说明：并没有利用systemctl实现自动启动，因为可能会在不支持systemctl的系统上使用。
-
----
-
-
-
-## 说明：
-
-配置文件你可以选择软链接或者直接复制。软链接的方式方便你直接进行改动，但如果你想在不同的服务器上有某些不同的设置，直接复制会更好一些。
 
 ## vim：
 
