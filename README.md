@@ -79,15 +79,17 @@ source ~/.local/bin/tmux/init.sh
 ### tmux的一些常用快捷键：
 
 + Ctrl a: prefix
-+ prefix + |: 右侧新建pane
-+ prefix + -: 上侧新建pane
++ prefix + |: 在当前window右侧新建pane
++ prefix + -: 在当前window上侧新建pane
 + prefix + C: 新建一个会话（弹窗输入会话名称）
-+ prefix +c: 在当前会话新建窗口
++ prefix +c: 在当前会话新建窗口(window)
 + prefix + S: 切换到上一个会话(session)
 + prefix + s: 弹窗列表，切换会话
-+ prefix + w: 切换窗口(pane)
++ prefix + w: 切换窗口(window)
 + prefix + @: 将当前会话的pane独立为一个新的session并进入
 + prefix + +: 将当前pane最大化
++ prefix + !: 将当前pane独立为window
++ prefix + ,: 重命名当前window
 
 ---
 
