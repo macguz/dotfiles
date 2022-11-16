@@ -90,7 +90,7 @@ source ~/.local/bin/tmux/init.sh
 + prefix + +: 将当前pane最大化
 + prefix + !: 将当前pane独立为window
 + prefix + ,: 重命名当前window
-
++ movew -s ${session_name}:${window_index}: 将指定的会话中的指定窗口移到当前的会话中
 ---
 
 
